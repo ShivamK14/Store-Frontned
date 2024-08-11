@@ -3,10 +3,7 @@
         {
             "source": "/api/:path*",
             "destination": "https://store-raiting-project.onrender.com/:path*"
-        },
-        {
-            "source": "/(.*)",
-            "destination": "/"
         }
+      
     ]
 }
