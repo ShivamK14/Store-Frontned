@@ -9,6 +9,7 @@ import CreateStore from "./pages/createStore/CreateStore";
 import MyStore from "./pages/myStore/MyStore";
 import CreateStore2 from "./pages/createStore/CreateStore2";
 import test from "./components/TestTEST";
+import UserSettings from "./pages/User/UserSettings";
 function App() {
   const { authUser } = useAuthContext();
   console.log(authUser);
@@ -34,6 +35,10 @@ function App() {
         <Route
           path="/MyStore"
           element={authUser ? <MyStore /> : <Navigate to={"/login"} />}
+        />
+        <Route
+          path="/Settings"
+          element={authUser ? <UserSettings /> : <Navigate to={"/login"} />}
         />
       </Routes>
       <Toaster />

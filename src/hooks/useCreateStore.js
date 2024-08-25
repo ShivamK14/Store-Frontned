@@ -30,7 +30,9 @@ const useCreateStore = () => {
       if (data.error) {
         throw new Error(data.error);
       }
-      localStorage.setItem("chat-user", JSON.stringify(data));
+      if (data.message) {
+        toast.success(data.message);
+      }
     } catch (error) {
       toast.error(error.message);
     } finally {

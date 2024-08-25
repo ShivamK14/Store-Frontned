@@ -4,7 +4,7 @@ import toast from "react-hot-toast";
 const useUpdateStore = () => {
   const [loading, setLoading] = useState(false);
 
-  const updatestore = async ({ storename, address },id) => {
+  const updatestore = async ({ storename, address }, id) => {
     const success = handleInputErrors({
       storename,
       address,
@@ -28,6 +28,9 @@ const useUpdateStore = () => {
       console.log(data);
       if (data.error) {
         throw new Error(data.error);
+      }
+      if (data.message) {
+        toast.success(data.message);
       }
     } catch (error) {
       toast.error(error.message);

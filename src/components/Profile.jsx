@@ -14,7 +14,7 @@ const Profile = () => {
           onClick={() => setToggelProfile(!toggelprofile)}
           data-dropdown-toggle="userDropdown"
           data-dropdown-placement="bottom-start"
-          class="w-10 h-10 rounded-full cursor-pointer"
+          className="w-10 h-10 rounded-full cursor-pointer"
           src={user.profilePic}
           alt="User dropdown"
         />
@@ -42,7 +42,7 @@ const Profile = () => {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="/Settings"
                   class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                 >
                   Settings

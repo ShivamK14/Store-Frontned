@@ -16,6 +16,9 @@ const useDeleteStore = () => {
       if (data.error) {
         throw new Error(data.error);
       }
+      if (data.message) {
+        toast.success(data.message);
+      }
     } catch (error) {
       toast.error(error.message);
     } finally {
