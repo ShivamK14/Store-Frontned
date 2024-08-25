@@ -15,6 +15,7 @@ function App() {
   console.log(authUser);
   return (
     <div className="pt-20 p-5 min-h-screen ">
+      
       <Routes>
         <Route
           path="/"
